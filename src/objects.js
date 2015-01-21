@@ -10,7 +10,7 @@
 
 function returnObjectLiteral() {
   //your code here
-  return undefined; //Modify ONLY this line
+  return {type:'Goldfish', brand:'Pepperidge Farm', flavor:'Cheddar', count:2000};
   //end your code
 }
 
@@ -38,24 +38,63 @@ function returnObjectLiteral() {
 */
 
 //your code here
-
+function MessageLog(user){
+  this.user = user;
+  this.messages = new Array();
+  this.sent = 0;
+  this.received = 0;
+}
+ 
+MessageLog.prototype.logMessage = function( messageText, direction ){
+  if ( direction === 0 )
+    this.sent += 1;
+ else if (direction === 1) 
+    this.received += 1;
+ 
+  this.messages.unshift(messageText);
+  if (this.messages.length > 5)
+    this.messages.pop();
+  
+}
+ 
+MessageLog.prototype.getSentMessage = function(n) {
+  if (n < 5 && n >= 0){
+    return this.messages[n];
+  }
+}
+ 
+MessageLog.prototype.totalSent = function(){
+    return this.sent;
+}
+ 
+MessageLog.prototype.totalReceived = function(){
+    return this.received;
+}
+ 
 //end your code
-
+ 
 /**
 * Add a method to the MessageLog prototype:
 * lastReceivedMessage() - returns the message text of the last message the user
 * received.
 */
 //your code here
-
+MessageLog.prototype.lastReceivedMessage = function(){
+  return this.messages[this.messages.length-1];
+}
 //end your code
-
+ 
 /**
 * Create an instance of a `MessageLog` for the user "BlackHatGuy". Have the
 * instance receive 3 messages: "foo", "bar" and "baz", received in that order.
 * Assign it to the variable myLog.
 */
-
+ 
 //your code here
-
+var myLog = new MessageLog("BlackHatGuy");
+myLog.logMessage("foo", 1);
+myLog.logMessage("bar", 1);
+myLog.logMessage("baz", 1);
+ 
 //end your code
+
