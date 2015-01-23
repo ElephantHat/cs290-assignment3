@@ -32,20 +32,20 @@ var barType = typeof bar;
 */
 
 //your code here
-bar = function(doubleArray){
+bar = function(doubleArray) {
     var i;
-    var success=true;
-    if (typeof(doubleArray) === "object")
-    for (i=0; i<doubleArray.length; i++){
-        if (typeof(doubleArray[i]) !== "number")
+    var success = true;
+    if (typeof(doubleArray) === 'object')
+    for (i = 0; i < doubleArray.length; i++) {
+        if (typeof(doubleArray[i]) !== 'number')
             success = false;
         else
-            doubleArray[i] = doubleArray[i]*2;
+            doubleArray[i] = doubleArray[i] * 2;
     }
     else
         success = false;
     return success;
-}
+};
 //end your code
 
 /**
@@ -81,20 +81,20 @@ function GitLog(hash, date, message) {
 */
 
 //your code here
-function parseGit(logArray){
+function parseGit(logArray) {
     var i, log, hash, date, message, cut1, cut2, newLog;
     var gitLogArray = new Array();
-    
-    for (i=0; i<logArray.length; i++){
+
+    for (i = 0; i < logArray.length; i++) {
         log = logArray[i];
         cut1 = log.indexOf(' ');
         cut2 = log.indexOf('"');
         hash = log.slice(0, cut1);
-        date = new Date(log.slice(cut1+1, cut2-1));
+        date = new Date(log.slice(cut1 + 1, cut2 - 1));
         message = log.slice(cut2);
-        message = message.replace(/"/g,""); 
+        message = message.replace(/"/g, '');
         newLog = new GitLog(hash, date, message);
-        gitLogArray.push(newLog); 
+        gitLogArray.push(newLog);
     }
     return gitLogArray;
 }
