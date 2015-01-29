@@ -5,3 +5,9 @@ Tasks: Created & cloned repos. Wrote code required by assignment. Looked up docu
 Start: Fri, 23 Jan 2015 1515 -800
 End: Fri, 23 Jan 2015 1525 -800
 Tasks: De-linted assignment files
+
+#Begin Part 2
+
+Start: Wed, 28 Jan 2000 -800
+End: 
+Tasks: Read assignment description, create repo for part 2, start building html framework
