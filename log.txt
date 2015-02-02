@@ -8,6 +8,10 @@ Tasks: De-linted assignment files
 
 #Begin Part 2
 
-Start: Wed, 28 Jan 2000 -800
-End: 
+Start: Wed, 28 Jan 2015 2000 -800
+End: Wed, 28 Jan 2015 2100 -800
 Tasks: Read assignment description, create repo for part 2, start building html framework
+
+Start: Sun, 1 Feb 2015 1700 -800
+End: Sun, 1 Feb 2015 2100 -800
+Tasks: Finish coding assignment, minor testing, delinting code.
